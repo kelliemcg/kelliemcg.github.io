@@ -1,6 +1,8 @@
+/* MOBILE FIRST FOCUS */
 body {
 background-color: #31AFB4}
     
+/* HAMBURGER DROP DOWN MENU */
     .dropdown {
     height: 0%;
     width: 100%;
@@ -30,6 +32,7 @@ background-color: #31AFB4}
     display: block;
     transition: 0.3s;}
 
+/* USING FLEX BOX IN COLUMN DIRECTION FOR MOBILE DEVICES*/
     .homecontainer {
     display: flex;
     flex-direction: column;
@@ -102,6 +105,7 @@ background-color: #31AFB4}
     text-align: center;
     padding: 20px;}
 
+/* FOOTER BROKE INTO SECTIONS TO USE THEM INDIVIDUALLY*/
     #homecontact {
     text-align: center;
     background-color: white;}
@@ -127,6 +131,7 @@ background-color: #31AFB4}
     max-width: 100%;
     height:auto; }
 
+ /* LINKS DISPLAYED THE SAME ACROSS ALL DEVICES AND PAGES */
     a:link{
     color: black;
     text-decoration: none;
@@ -153,20 +158,6 @@ background-color: #31AFB4}
     background-color: white;}
             
     #aboutsocialmedia {
-    width: auto;
-    height: auto;
-    text-align: center;
-    background-color: white;}
-
-    #joincontact {
-    text-align: center;
-    background-color: white;}
-                    
-    #joindetails{
-    text-align: center;
-    background-color: white;}
-                
-    #joinsocialmedia {
     width: auto;
     height: auto;
     text-align: center;
@@ -234,6 +225,27 @@ background-color: #31AFB4}
     flex-direction: column;
     height: 100vh;}
 
+    #joincontact {
+    text-align: center;
+    background-color: white;}
+                        
+    #joindetails{
+    text-align: center;
+    background-color: white;}
+                    
+    #joinsocialmedia {
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: white;}
+
+    #joinminilogo {
+        width: auto;
+        height: auto;
+        text-align: center;
+        background-color: white;
+    }
+
     #quote {
     font-size: 3rem;
     color: #30b1b4;
@@ -243,10 +255,12 @@ background-color: #31AFB4}
     text-align: center;
     background-color: white;}
 
+    /* FORM - TEXT BOXES, RADIO BUTTONS AND TEXT AREA WITH SUBMIT BUTTON */
+
     form {background-color: white;
     padding: 10px;}
             
-        fieldset {
+    fieldset {
         padding: 1em 2em;
         border: solid 1px #30b1b4;
         border-radius: 6px;
@@ -297,6 +311,7 @@ background-color: #31AFB4}
         .radio p {
         margin-bottom: 0;}
 
+/* TABLET DEVICES USING MIN WIDTH*/
 @media screen and (min-width:420px) {
 
     .dropdown {
@@ -409,10 +424,9 @@ background-color: #31AFB4}
         #homeminilogo {
         grid-column: 2;
         grid-row: 10;}
-
-    
 }
 
+/* DESKTOP DEVICE USING MIN WIDTH */
 @media screen and (min-width: 800px) {
 
     .dropdown {
@@ -445,6 +459,7 @@ background-color: #31AFB4}
         display: block;
         transition: 0.3s;}
 
+/* GRID FOR HOME.HTML */
     .homecontainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
