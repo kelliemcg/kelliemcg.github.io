@@ -116,6 +116,13 @@ background-color: #31AFB4}
     text-align: center;
     background-color: white;}
 
+    #homeminilogo {
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: white;
+    }
+
     img{
     max-width: 100%;
     height:auto; }
@@ -273,13 +280,13 @@ background-color: #31AFB4}
         background-color: #30b1b4;
         border: 0.1em solid;
         border-radius: 6px;
-        top: 140;
+        top: 140%;
         left: 80%;
         position: relative;}
 
         textarea {
         min-height: 8em;
-        min-width: 100%;
+        max-width: 100%;
         padding: .5em;
         border: solid 1px;
         background-color: white;}
@@ -292,125 +299,249 @@ background-color: #31AFB4}
 
 @media screen and (min-width:400px) {
 
-    .homecontainer {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 130px 50px 450px 50px 200px 200px 50px 380px 380px 50px;}
-
-    .mainlogo {
-    display: grid;
-    grid-column: 1 /span 2;
-    grid-row: 1;
-    position:sticky;
-    transition: 0.6s;
+    .dropdown {
+    height: 0%;
     width: 100%;
-    top: 130px;
-    left: 0}
-
-    nav {
-    display: grid;
-    grid-column: 1/ span 2;
-    grid-row: 2;
-    display: flex;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
     background-color: white;
-    border-bottom: #30b1b4 .1em solid;
-    justify-content: space-evenly;
-    padding: 20px;
-    position:sticky;
-    transition: 0.6s;
+    overflow: hidden;
+    transition: 0.5s;}
+    
+    .dropdownlist {
+    position: relative;
+    top: 25%;
     width: 100%;
-    top: 130px;
-    left: 0}
+    text-align: center;
+    margin-top: 30px;}
+    
+    .dropdownlist a:hover{
+    color: #30b1b4;}
+    
+    .dropdown a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    display: block;
+    transition: 0.3s;}
 
-    #mainimage {
-    grid-column: 1/span 2;
-    grid-row: 3;}
+    .homecontainer {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 130px 350px 80px 100px 100px 80px 350px 350px 30px 70px;
+    grid-template-areas: 
+    "mainlogo mainlogo"
+    "mainimage mainimage"
+    "memberreviews membersreviews"
+    "testimonial1 testimonial2"
+    "testimonial3 testimonial4"
+    "meetcoaches meetcoaches"
+    "coach1 coach2"
+    "coach3 coach4"
+    "homecontact homesocialmedia"
+    "homedetails homeminilogo";}
 
-    .memberreviews {
-    grid-column: 1 /span 2;
-    grid-row: 4}
+        #mainlogo {
+        grid-column: 1 /span 2;
+        grid-row: 1;}
 
-    .testimonial1 {
-    grid-column: 1;
-    grid-row: 5;}
+        #mainimage {
+        grid-column: 1/span 2;
+        grid-row: 2;
+        background-color: #30b1b4;}
 
-    .testimonial2 {
-    grid-column: 2;
-    grid-row: 5;}
+        .memberreviews {
+        grid-column: 1 /span 2;
+        grid-row: 3}
 
-    .testimonial3 {
-    grid-column: 1;
-    grid-row: 6;}
+        .testimonial1 {
+        grid-column: 1;
+        grid-row: 4;}
 
-    .testimonial4{
-    grid-column: 2;
-    grid-row: 6;}
+        .testimonial2 {
+        grid-column: 2;
+        grid-row: 4;}
+
+        .testimonial3 {
+        grid-column: 1;
+        grid-row: 5;}
+
+        .testimonial4{
+        grid-column: 2;
+        grid-row: 5;}
+
+        .meetcoaches{
+        grid-column: 1/span 2;
+        grid-row: 6;}
+
+        .coach1{
+        grid-column: 1;
+        grid-row: 7;}
+
+        .coach2 {
+        grid-column: 2;
+        grid-row: 7;}
+
+        .coach3 {
+        grid-column: 1;
+        grid-row: 8;}
+
+        .coach4{
+        grid-column: 2;
+        grid-row: 8;}
+
+        #homecontact{
+        grid-column: 1;
+        grid-row: 9;}
+
+        #homedetails {
+        grid-column: 1;
+        grid-row: 10;}
+
+        #homesocialmedia {
+        grid-column: 2;
+        grid-row: 9;}
+
+        #homeminilogo {
+        grid-column: 2;
+        grid-row: 10;}
+
     
 }
 
 @media screen and (min-width: 800px) {
 
-.homecontainer{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 130px 50px 450px 50px 200px 50px 380px 50px;}
-       
-    .mainlogo {
-    display: grid;
-    grid-column: 1 /span 4;
-    grid-row: 1;}
-        
-        nav {
-        display: grid;
-        grid-column: 1/ span 4;
-        grid-row: 2;
-        display: flex;
-        background-color: white;
-        border-bottom: #30b1b4 .1em solid;
-        justify-content: space-evenly;
-        padding: 20px;
-        position:sticky;
-        transition: 0.6s;
+    .dropdown {
+        height: 0%;
         width: 100%;
-        top: 130px;
-        left: 0}
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow: hidden;
+        transition: 0.5s; 
+        padding-bottom: 10px;}
     
-    .memberreviews {
-    grid-column: 1/ span 4;
-    grid-row: 4}
+        .dropdownlist {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;}
     
-    .testimonial1 {
-    grid-column: 1;
-    grid-row: 5;}
+        .dropdownlist a:hover{
+        color: #30b1b4;}
     
-    .testimonial2 {
-    grid-column: 2;
-    grid-row: 5;}
+        .dropdown a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 30px;
+        color: #31AFB4;
+        display: block;
+        transition: 0.3s;}
+
+    .homecontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 130px 450px 100px 150px 100px 380px 50px;
+    grid-template-areas: "mainlogo mainlogo mainlogo mainlogo"
+    "mainimage mainimage mainimage mainimage"
+    "memberreviews memberreviews memberreviews memberreviews"
+    "testimonial1 testimonial2 testimonial3 testimonial 4"
+    "meetcoaches meetcoaches meet coaches"
+    "coach1 coach2 coach3 coach4"
+    "homecontact homedetails homesocialmedia minilogo";}
+       
+        #mainlogo {
+        grid-column: 1 /span 4;
+        grid-row: 1;}
     
-    .testimonial3 {
-    grid-column: 3;
-    grid-row: 4;}
+        #mainimage {
+        grid-column: 1/span 4;
+        grid-row: 2;
+        background-color: #30b1b4;}
     
-    .testimonial4 {
-    grid-column: 4;
-    grid-row: 5;}
+        .memberreviews {
+        grid-column: 1 /span 4;
+        grid-row: 3}
     
-    .meetcoaches {
-    grid-column: 1/ span 4;
-    grid-row: 6}
+        .testimonial1 {
+        grid-column: 1;
+        grid-row: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
     
-    .coach1 {
-    grid-column: 1;
-    grid-row: 7;}
+        .testimonial2 {
+        grid-column: 2;
+        grid-row: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
     
-    .coach2 {
-    grid-column: 2;
-    grid-row: 7;}
+        .testimonial3 {
+        grid-column: 3;
+        grid-row: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
     
-    .coach3 {
-    grid-column: 3;
-    grid-row: 7;}
+        .testimonial4{
+        grid-column: 4;
+        grid-row: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
     
-    .coach4 {
-    grid-column: 4;
-    grid-row: 7;}
+        .meetcoaches{
+        grid-column: 1/span 4;
+        grid-row: 5;}
+    
+        .coach1{
+        grid-column: 1;
+        grid-row: 6;}
+    
+        .coach2 {
+        grid-column: 2;
+        grid-row: 6;}
+    
+        .coach3 {
+        grid-column: 3;
+        grid-row: 6;}
+    
+        .coach4{
+        grid-column: 4;
+        grid-row: 6;}
+    
+        #homecontact{
+        grid-column: 1;
+        grid-row: 7;
+        background-color: white;}
+    
+        #homedetails {
+        grid-column: 2;
+        grid-row: 7;
+        background-color: white;
+        justify-content: center;
+        align-items: center;}
+    
+        #homesocialmedia {
+        grid-column: 3;
+        grid-row: 7;
+        background-color: white;
+        justify-content: center;
+        align-items: center;}
+
+        #homeminilogo {
+        grid-column: 4;
+        grid-row: 7;
+        background-color: white;
+        justify-content: center;
+        align-items: center;}
 
     }
